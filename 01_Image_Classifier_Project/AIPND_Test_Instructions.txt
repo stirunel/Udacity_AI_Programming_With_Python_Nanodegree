@@ -1,0 +1,21 @@
+Training Check: 
+python train.py ../aipnd-project/flowers --arch vgg --gpu
+python train.py ../aipnd-project/flowers --arch vgg --save_dir model --learning_rate 0.0005 --hidden_units 500 --epochs 3 --gpu
+
+Prediction check: 
+
+python predict.py ../aipnd-project/flowers/test/28/image_05230.jpg model/checkpoint.pth --gpu
+python predict.py ../aipnd-project/flowers/test/28/image_05230.jpg model/checkpoint.pth --topk 5 --gpu
+python predict.py ../aipnd-project/flowers/test/28/image_05230.jpg model/checkpoint.pth --topk 5 --category_names ../aipnd-project/cat_to_name.json --gpu
+
+
+Training Check:
+
+python train.py ../aipnd-project/flowers --arch resnet --gpu
+python train.py ../aipnd-project/flowers --arch resnet --save_dir model --learning_rate 0.001 --hidden_units 500 --epochs 3 --gpu
+
+Prediction check: 
+
+python predict.py ../aipnd-project/flowers/test/28/image_05230.jpg model/checkpoint.pth --gpu
+python predict.py ../aipnd-project/flowers/test/28/image_05230.jpg model/checkpoint.pth --topk 5 --gpu
+python predict.py ../aipnd-project/flowers/test/28/image_05230.jpg model/checkpoint.pth --topk 5 --category_names ../aipnd-project/cat_to_name.json --gpu
